@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Happy Birthday Omair</title>
+  <style>
+    body {
+      background: url('https://source.unsplash.com/1600x900/?moon,stars') no-repeat center center fixed;
+      background-size: cover;
+      text-align: center;
+      font-family: 'comic sans MS', cursive;
+      color: White;
+    }
+    h1 {
+      font-size: 3em;
+      text-shadow: 3px 3px 10px yellow;
+    }
+    #birthdayMsg {
+      font-size: 2em;
+      margin-top: 20px;
+    }
+    .envelop {
+      width: 150px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    .sleeping-panda {
+      width: 200px;
+      margin-top: 20px;
+    }
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <h1>🎉Happy Birthday Omair!🎉</h1>
+  <p id="birthdayMsg">Happy Birthday Baka!</p>
+  <img src="https://media.giphy.com/media/3o7TKP9ln2Dr6ze6cU/giphy.gif" class="sleeping-panda" alt="sleeping panda">
+  <br>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/3/3e/Envelop_%28vector@29.svg" class="envelop" onclick="showMessage()" alt="Envelop">
+  <audio id="birthdaysound" src="happy_birthday_baka.mp3" preload="auto"></audio>
+
+  <script>
+    const messages = [
+      "Happy Birthday Baka!",
+      "Feliz Cumpleanos Baka!",
+      "Joyeux Anniversaire Baka!",
+      "생일 축하해요 바카!",
+      "お誕生日おめでとう Baka!",
+      "Buon Compleanno Baka!",
+      "Happy Birthday Omair Alay!"
+    ];
+
+    function changeMessage() {
+      let index = Math.floor(Math.random() * messages.length);
+      document.getElementById("birthdayMsg").textContent = messages[index];
+    }
+
+    function showMessage() {
+      alert("🎊🎊Happy Birthday Baka!🎊🎊\nHave an amazing year ahead!");
+      document.getElementById("birthdaysound").play();
+    }
+
+    setInterval(changeMessage, 5000);
+  </script>
+</body>
+</html>
